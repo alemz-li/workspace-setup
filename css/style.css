@@ -157,7 +157,7 @@ li a:hover {
 
 .nav__theme-toggler span.active {
   background: var(--color-dark-variant);
-  color: #181a1e;
+  color: #fff;
   border-radius: var(--border-radius-1);
 }
 
@@ -273,6 +273,10 @@ header div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.menu .nav__links {
+  display: none;
 }
 
 /* Mobile */
