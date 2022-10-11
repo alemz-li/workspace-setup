@@ -1,4 +1,7 @@
 const themeToggler = document.querySelector('.nav__theme-toggler')
+const menuToggler = document.querySelector('.nav__menu-toggler')
+const menuClose = document.querySelector('.menu__close')
+const menu = document.querySelector('.menu')
 const setupComponents = document.querySelector('.components')
 
 // Animation
@@ -23,4 +26,16 @@ themeToggler.addEventListener('click', () => {
 
   themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
   themeToggler.querySelector('span:nth-child(2)').classList.toggle('active')
+})
+
+menuToggler.addEventListener('click', () => {
+  menu.classList.toggle('visible')
+})
+
+menu.addEventListener('click', (ev) => {
+  if (ev.target.tagName === 'A') menu.classList.remove('visible')
+})
+
+menuClose.addEventListener('click', () => {
+  menu.classList.remove('visible')
 })
